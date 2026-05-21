@@ -24,10 +24,20 @@ plugins {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
         google()
         mavenCentral()
+        maven { url = uri("https://www.jitpack.io") }
+        maven { url = uri("https://jitpack.io") }
     }
 }
 
 rootProject.name = "ColorNote"
 include ':app'
+
+// 来自 third-module 的构建工具（dynamic_builder 等）
+include(':build_tools')
+project(':build_tools').projectDir = file('../third-module/build_tools/build_tools')

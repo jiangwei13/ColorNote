@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+sourceSets {
+    main {
+        java.srcDir '../../third-module/build_tools/blackobfuscator_plugin/src'
+        resources.srcDir '../../third-module/build_tools/blackobfuscator_plugin/resources'
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+    mavenLocal()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    implementation 'com.github.megatronking.stringfog:interface:5.0.0'
+    implementation gradleApi()
+    implementation('com.github.CodingGay.BlackObfuscator:dex-tools:2.1') {
+        exclude group: 'com.google.guava', module: 'guava'
+    }
+    implementation 'com.google.guava:guava:32.0.1-jre'
+}

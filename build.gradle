@@ -1,4 +1,54 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.github.Petterpx.walle:plugin:1.0.5'
+
+        classpath "com.github.liujingxing:XmlClassGuard:1.2.5"
+        // 本地 buildSrc 实现，源码来自 third-module/build_tools/blackobfuscator_plugin
+        classpath 'com.github.megatronking.stringfog:gradle-plugin:5.2.0'
+        // 选用加解密算法库，默认实现了xor算法，也可以使用自己的加解密库。
+        classpath 'com.github.megatronking.stringfog:xor:5.0.0'
+        classpath "com.github.qq549631030:android-junk-code:1.3.4"
+    }
+}
+
 plugins {
     alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
+    id 'org.jetbrains.kotlin.android' version '2.1.0' apply false
 }
+
+// 全局配置，供子模块使用
+ext.appConfig = [
+    "HOST"              : "",
+    "privacyUrl"        : "",
+    "userUrl"           : "",
+    "DEBUG_APPID"       : "",
+    "RELEASE_APPID"     : "",
+    "DEBUG_SSK"         : "",
+    "RELEASE_SSK"       : "",
+    "isDebug"           : "true",
+    "logSwitch"         : true,
+    "buglyId"           : "",
+
+    "Admob_AppId"       : "",
+    "FISRT_SPLASH"      : "",
+    "FIRST_REWORD"      : "",
+    "VERSIONCODE"       : 1,
+    "VERSIONNAME"       : "1.0.0",
+    "umID"              : "",
+    "ad_LiveTime"       : "2026-12-31 23:59:59",
+    "ad_huawei_LiveTime": "0",
+
+    "TOPON_APPID"       : "",
+    "TOPON_APPKEY"      : "",
+    "AF_APP_KEY"        : "",
+    "ADJUST_TOKEN"      : "",
+    "APPID"             : "",
+    "TradPlus_ID"       : "",
+]
