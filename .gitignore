@@ -13,3 +13,49 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Gradle
+*.iml
+.gradle/
+build/
+/build/
+
+# Local configuration
+local.properties
+
+# IDE - Android Studio / IntelliJ
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+/.idea/gradle.xml
+/.idea/jarRepositories.xml
+/.idea/deploymentTargetDropDown.xml
+/.idea/misc.xml
+/.idea/compiler.xml
+/.idea/vcs.xml
+/.idea/inspectionProfiles/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Android
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+*.aab
+
+# Logs
+*.log
+
+# Claude Code
+.claude/
+
+# Signing
+*.jks
+*.keystore
+keystore.properties
