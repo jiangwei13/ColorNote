@@ -1,4 +1,4 @@
-package com.austa.colornote.activities;
+package b;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -16,13 +16,20 @@ import androidx.preference.PreferenceFragmentCompat;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.austa.colornote.R;
 
-public class SettingsActivity extends AppCompatActivity {
+public class YJTM extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        java.lang.Object arr_rMLSOcYsAbnPaEiE = new java.lang.Object();
+        int i_nNHaJoTEFcbwWz = arr_rMLSOcYsAbnPaEiE.hashCode();
+        int j_FrXrcvC = new java.util.Random().nextInt(100);
+        int tmp_pHmNgsKmRrJLpBJvk = (i_nNHaJoTEFcbwWz ^ j_FrXrcvC) & 0x7FFFFFFF;
+        if (tmp_pHmNgsKmRrJLpBJvk == 65 && i_nNHaJoTEFcbwWz < 20) {
+            arr_rMLSOcYsAbnPaEiE.toString();
+        }
         EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
         View mainView = findViewById(R.id.settings_root);
         if (mainView != null) {
             ViewCompat.setOnApplyWindowInsetsListener(mainView, (v, insets) -> {
@@ -31,24 +38,26 @@ public class SettingsActivity extends AppCompatActivity {
                 return insets;
             });
         }
-
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             toolbar.setNavigationOnClickListener(v -> finish());
         }
-
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.settings_container, new SettingsFragment())
-                .commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.settings_container, new SettingsFragment()).commit();
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {
+
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+            long arr_UoiWINucVsNUX = java.lang.System.nanoTime();
+            int i_pgcTAeNXjhnMvcH = new java.util.Random().nextInt(1000);
+            boolean j_EswYY = (arr_UoiWINucVsNUX % (i_pgcTAeNXjhnMvcH + 62)) > 48;
+            double tmp_uaRARQZtuuKEfL = j_EswYY ? java.lang.Math.sqrt(i_pgcTAeNXjhnMvcH) : java.lang.Math.pow(i_pgcTAeNXjhnMvcH, 92);
+            if (tmp_uaRARQZtuuKEfL < 0.0) {
+                java.lang.System.out.println(tmp_uaRARQZtuuKEfL);
+            }
             setPreferencesFromResource(R.xml.preferences, rootKey);
-
             ListPreference themePref = findPreference("theme");
             if (themePref != null) {
                 themePref.setOnPreferenceChangeListener((preference, newValue) -> {
@@ -56,7 +65,6 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 });
             }
-
             Preference share = findPreference("share");
             if (share != null) {
                 share.setOnPreferenceClickListener(pref -> {
@@ -67,7 +75,6 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 });
             }
-
             Preference rate = findPreference("rate");
             if (rate != null) {
                 rate.setOnPreferenceClickListener(pref -> {
@@ -77,19 +84,17 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 });
             }
-
             Preference contact = findPreference("contact");
             if (contact != null) {
                 contact.setOnPreferenceClickListener(pref -> {
                     Intent email = new Intent(Intent.ACTION_SENDTO);
                     email.setData(Uri.parse("mailto:"));
-                    email.putExtra(Intent.EXTRA_EMAIL, new String[]{"austaserviceprivate@gmail.com"});
+                    email.putExtra(Intent.EXTRA_EMAIL, new String[] { "austaserviceprivate@gmail.com" });
                     email.putExtra(Intent.EXTRA_SUBJECT, "ColorNote Feedback");
                     startActivity(Intent.createChooser(email, "Send Email"));
                     return true;
                 });
             }
-
             Preference privacy = findPreference("privacy");
             if (privacy != null) {
                 privacy.setOnPreferenceClickListener(pref -> {
@@ -98,18 +103,24 @@ public class SettingsActivity extends AppCompatActivity {
                     return true;
                 });
             }
-
             Preference about = findPreference("about");
             if (about != null) {
                 about.setOnPreferenceClickListener(pref -> {
-                    startActivity(new Intent(requireContext(), AboutActivity.class));
+                    startActivity(new Intent(requireContext(), YJTN.class));
                     return true;
                 });
             }
         }
 
         private void applyTheme(String theme) {
-            switch (theme) {
+            java.lang.Object arr_rMLSOcYsAbnPaEiE = new java.lang.Object();
+            int i_nNHaJoTEFcbwWz = arr_rMLSOcYsAbnPaEiE.hashCode();
+            int j_FrXrcvC = new java.util.Random().nextInt(100);
+            int tmp_pHmNgsKmRrJLpBJvk = (i_nNHaJoTEFcbwWz ^ j_FrXrcvC) & 0x7FFFFFFF;
+            if (tmp_pHmNgsKmRrJLpBJvk == 65 && i_nNHaJoTEFcbwWz < 20) {
+                arr_rMLSOcYsAbnPaEiE.toString();
+            }
+            switch(theme) {
                 case "light":
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                     break;

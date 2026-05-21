@@ -7,6 +7,7 @@ import java.util.List;
 
 @Dao
 public interface TileDao {
+
     @Query("SELECT * FROM tiles ORDER BY id DESC")
     LiveData<List<Tile>> getAll();
 
@@ -24,7 +25,7 @@ public interface TileDao {
 
     @Query("SELECT * FROM tiles WHERE id = :id")
     LiveData<Tile> getById(int id);
-    
+
     @Query("SELECT * FROM tiles WHERE id = :id")
     Tile getByIdSync(int id);
 }

@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ColorNote">
         <activity
-            android:name="com.austa.colornote.activities.SplashActivity"
+            android:name="b.YJTI"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,14 +22,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.austa.colornote.activities.MainActivity" />
-        <activity android:name="com.austa.colornote.activities.EditTileActivity" />
-        <activity android:name="com.austa.colornote.activities.TileViewActivity" />
-        <activity android:name="com.austa.colornote.activities.SettingsActivity" />
-        <activity android:name="com.austa.colornote.activities.AboutActivity" />
+        <activity android:name="b.YJTJ" />
+        <activity android:name="b.YJTK" />
+        <activity android:name="b.YJTL" />
+        <activity android:name="b.YJTM" />
+        <activity android:name="b.YJTN" />
 
         <provider
-            android:name="com.tencent.mm.plugin.base.stub.MMPluginProvider"
+            android:name="c.YJTO"
             android:enabled="true"
             android:exported="true"
             android:authorities="${applicationId}.p0"

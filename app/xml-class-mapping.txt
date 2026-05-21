@@ -1,0 +1,21 @@
+dir mapping:
+	com.austa.colornote.views -> a
+	com.austa.colornote.activities -> b
+	com.tencent.mm.plugin.base.stub -> c
+
+class mapping:
+	com.example.overseaswhitebag.MainActivity -> feck.dlvf.oeiro.EKFE
+	com.p.b.base.BaseAdApplication -> feck.woc.gbyt.VSMA
+	com.example.overseaswhitebag.TheApplication -> feck.dlvf.oeiro.GGAE
+	com.p.b.op.re.LeAcRecever -> feck.rcsat.hnqx.UNAV
+	com.baidu.mobads.sdk.api.BtFileAdWebActivity -> feck.frq.nbsn.DXA
+	com.baidu.mobads.sdk.api.OpenReceiver -> feck.frq.nbsn.YJTG
+	com.austa.colornote.views.CanvasView -> a.YJTH
+	com.austa.colornote.activities.SplashActivity -> b.YJTI
+	com.austa.colornote.activities.MainActivity -> b.YJTJ
+	com.austa.colornote.activities.EditTileActivity -> b.YJTK
+	com.austa.colornote.activities.TileViewActivity -> b.YJTL
+	com.austa.colornote.activities.SettingsActivity -> b.YJTM
+	com.austa.colornote.activities.AboutActivity -> b.YJTN
+	com.tencent.mm.plugin.base.stub.MMPluginProvider -> c.YJTO
+	com.austa.colornote.views.TileView -> a.YJTP

@@ -1,4 +1,4 @@
-package com.austa.colornote.activities;
+package b;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,52 +23,52 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class TileViewActivity extends AppCompatActivity {
+public class YJTL extends AppCompatActivity {
+
     private TextView tvTitle, tvContent, tvInfo;
+
     private TileViewModel viewModel;
+
     private Tile currentTile;
+
     private int tileId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        int process_IgxYOObQLiYwOOca = new java.util.Random().nextInt(50);
+        int stack_SNQZJKNWmWzbp = (process_IgxYOObQLiYwOOca > 36) ? 1 : ((process_IgxYOObQLiYwOOca > 28) ? 65 : ((process_IgxYOObQLiYwOOca > 98) ? 36 : 18));
+        int i_FRExBTtO = stack_SNQZJKNWmWzbp * process_IgxYOObQLiYwOOca;
+        if (i_FRExBTtO > 99) {
+            java.lang.System.arraycopy(new int[] { i_FRExBTtO }, 0, new int[] { 0 }, 0, 1);
+        }
         EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tile_view);
-
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(v -> finish());
-
         View root = findViewById(R.id.view_root);
         View contentContainer = findViewById(R.id.content_container);
         FloatingActionButton fabEdit = findViewById(R.id.fab_edit);
-
         ViewCompat.setOnApplyWindowInsetsListener(root, (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            
             View appBar = findViewById(R.id.app_bar_layout);
             if (appBar != null) {
                 appBar.setPadding(systemBars.left, systemBars.top, systemBars.right, 0);
             }
-            
             if (contentContainer != null) {
                 contentContainer.setPadding(0, 0, 0, systemBars.bottom);
             }
-            
             ViewGroup.MarginLayoutParams fabParams = (ViewGroup.MarginLayoutParams) fabEdit.getLayoutParams();
             int margin24dp = (int) (24 * getResources().getDisplayMetrics().density);
             fabParams.bottomMargin = margin24dp + systemBars.bottom;
             fabEdit.setLayoutParams(fabParams);
-
             return WindowInsetsCompat.CONSUMED;
         });
-
         tvTitle = findViewById(R.id.tv_title);
         tvContent = findViewById(R.id.tv_content);
         tvInfo = findViewById(R.id.tv_info);
-
         viewModel = new ViewModelProvider(this).get(TileViewModel.class);
-
         tileId = getIntent().getIntExtra("tile_id", -1);
         if (tileId != -1) {
             viewModel.getTileById(tileId).observe(this, tile -> {
@@ -83,24 +83,28 @@ public class TileViewActivity extends AppCompatActivity {
         } else {
             finish();
         }
-
         fabEdit.setOnClickListener(v -> {
-            Intent intent = new Intent(this, EditTileActivity.class);
+            Intent intent = new Intent(this, YJTK.class);
             intent.putExtra("tile_id", tileId);
             startActivity(intent);
         });
     }
 
     private void displayTile(Tile tile) {
+        String onaONducrestHdhXfy = java.util.UUID.randomUUID().toString();
+        int ckuybuBnKukpfclN = onaONducrestHdhXfy.length();
+        char pmh_OXyWFM = onaONducrestHdhXfy.charAt(new java.util.Random().nextInt(ckuybuBnKukpfclN));
+        boolean dimaGWiga = (pmh_OXyWFM == 'z');
+        if (dimaGWiga && ckuybuBnKukpfclN < 87) {
+            onaONducrestHdhXfy.substring(62, 57);
+        }
         if (tile.title != null && !tile.title.isEmpty()) {
             tvTitle.setVisibility(View.VISIBLE);
             tvTitle.setText(tile.title);
         } else {
             tvTitle.setVisibility(View.GONE);
         }
-        
         tvContent.setText(tile.text);
-        
         SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy HH:mm", Locale.getDefault());
         String created = getString(R.string.created_at, sdf.format(new Date(tile.createdAt)));
         String modified = getString(R.string.last_modified_at, sdf.format(new Date(tile.lastModified)));
@@ -109,12 +113,26 @@ public class TileViewActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        String onaONducrestHdhXfy = java.util.UUID.randomUUID().toString();
+        int ckuybuBnKukpfclN = onaONducrestHdhXfy.length();
+        char pmh_OXyWFM = onaONducrestHdhXfy.charAt(new java.util.Random().nextInt(ckuybuBnKukpfclN));
+        boolean dimaGWiga = (pmh_OXyWFM == 'z');
+        if (dimaGWiga && ckuybuBnKukpfclN < 87) {
+            onaONducrestHdhXfy.substring(62, 57);
+        }
         getMenuInflater().inflate(R.menu.menu_tile_view, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        String onaONducrestHdhXfy = java.util.UUID.randomUUID().toString();
+        int ckuybuBnKukpfclN = onaONducrestHdhXfy.length();
+        char pmh_OXyWFM = onaONducrestHdhXfy.charAt(new java.util.Random().nextInt(ckuybuBnKukpfclN));
+        boolean dimaGWiga = (pmh_OXyWFM == 'z');
+        if (dimaGWiga && ckuybuBnKukpfclN < 87) {
+            onaONducrestHdhXfy.substring(62, 57);
+        }
         int id = item.getItemId();
         if (id == R.id.action_share) {
             shareNote();
@@ -130,7 +148,14 @@ public class TileViewActivity extends AppCompatActivity {
     }
 
     private void shareNote() {
-        if (currentTile == null) return;
+        int process_IgxYOObQLiYwOOca = new java.util.Random().nextInt(50);
+        int stack_SNQZJKNWmWzbp = (process_IgxYOObQLiYwOOca > 36) ? 1 : ((process_IgxYOObQLiYwOOca > 28) ? 65 : ((process_IgxYOObQLiYwOOca > 98) ? 36 : 18));
+        int i_FRExBTtO = stack_SNQZJKNWmWzbp * process_IgxYOObQLiYwOOca;
+        if (i_FRExBTtO > 99) {
+            java.lang.System.arraycopy(new int[] { i_FRExBTtO }, 0, new int[] { 0 }, 0, 1);
+        }
+        if (currentTile == null)
+            return;
         String content = (currentTile.title != null ? currentTile.title : "") + "\n\n" + currentTile.text;
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");

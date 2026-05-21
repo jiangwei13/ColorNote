@@ -1,5 +1,5 @@
 import com.github.megatronking.stringfog.plugin.StringFogMode
-import com.p.b.CustomKeyGenerator
+import feck.mgusj.uqtk.LRZK
 
 
 plugins {
@@ -19,47 +19,102 @@ apply from: "../../third-module/build_tools/jiagu/jiagu.gradle"
 
 xmlClassGuard {
     mappingFile = file("xml-class-mapping.txt")
+    //更改manifest文件的package属性，即包名
+    packageChange = [
+                 "com.example.overseaswhitebag"  : "feck.dlvf.oeiro",
+                 "com.p.b"  : "feck.rrnmw.qgkc",
+                ]
+    //移动目录
+    moveDir = [
+           "com.example.overseaswhitebag.privacy"   : "feck.agy.hkljn",
+           "com.example.overseaswhitebag.common.utils"                    : "feck.gxpt.gnc",
+           "com.p.b.master"                                 : "feck.etr.jucj",
+           "com.p.b.op"                                        : "feck.rcsat.hnqx",
+            "com.p.b.base_api_net"  : "feck.tnxq.xewc",
+            "com.p.b.pl223"         : "feck.yzc.mizt",
+            "com.p.b.common.fcm"     : "feck.eevv.zjgp",
+            "com.p.b.common"         : "feck.vobx.bblvx",
+            "com.xian.bc.xin"        : "feck.ftoss.txsp",
+            "com.p.b"         : "feck.woc.gbyt",
+            "com.catatanbelajar.belajarrr"  : "feck.whxpr.umjtj",
+
+           ]
 }
 
 
 // 加入dex混淆配置
 BlackObfuscator {
-    // 仅 release 构建时启用
-    enabled gradle.startParameter.taskNames.any { it.toLowerCase().contains("release") }
-    // 混淆深度
-    depth 2
-    // xmlClassGuard/packageChange 产出的映射，供本地插件回填原始/变更后的包名前缀
-    mappingFile = file("xml-class-mapping.txt")
-    // Kotlin object/companion 的静态初始化对 verifier 很敏感，dex 级变换默认跳过这些结构
+    // 是否启用
+    enabled true
+    // 混淆深度（3 比 2 更难反编译，4 以上可能导致方法字节码超限）
+    depth 3
+    // 所有业务代码都在 feck.* 下，一个前缀覆盖所有，不会误匹配第三方 SDK
+    obfClass = [
+                "feck",
+    ]
+    // Kotlin 安全配置
     skipStaticInitializer true
     skipKotlinSynthetic true
     skipKotlinSingletonLikeClasses true
-    skipInnerClasses true
+    skipInnerClasses false
     skipAndroidComponents false
-    skipCallbackLikeClasses true
-    // 这里只是候选包前缀，最终是否进入 dex 控制流混淆还会经过 Kotlin 安全过滤
-    obfClass = []
-
+    skipCallbackLikeClasses false
     // blackClass中的包或者类不会进行混淆(匹配前面一段)
-    blackClass = ["top.niunaijun.black"]
+    blackClass = [
+                "top.niunaijun.black",
+                "androidx",
+                "com.google",
+                "com.facebook",
+                "com.applovin",
+                "com.unity3d",
+                "com.ironsource",
+                "com.chartboost",
+                "com.mbridge",
+                "com.pangle",
+                "com.tradplusad",
+                "com.bigossp",
+                "com.vungle",
+                "com.inmobi",
+                "com.huawei",
+                "com.hihonor",
+                "com.adjust",
+                "com.appsflyer",
+                "com.tencent",
+                "com.squareup",
+                "com.jakewharton",
+                "com.github",
+                "com.fyber",
+                "com.smartdigimkttech",
+                "com.thinkup",
+                "com.mi",
+                "com.miui",
+                "com.android",
+                "org.greenrobot",
+                "org.jetbrains",
+                "io.reactivex",
+                "io.github",
+                "kotlin",
+                "kotlinx.coroutines",
+                "com.stringfog",
+    ]
 }
 
 
 androidJunkCode {
     variantConfig {
         release {
-            packageBase = "com.colornote.junk"
-            packageCount = 50
-            activityCountPerPackage = 40
+            packageBase = "com.feck.rntz.fijp"
+            packageCount = 56
+            activityCountPerPackage = 90
             excludeActivityJavaFile = false
-            otherCountPerPackage = 50
+            otherCountPerPackage = 84
             methodCountPerClass = 20
-            resPrefix = "cn_"
-            drawableCount = 100
-            stringCount = 100
+            resPrefix = "ctl_"
+            drawableCount = 161
+            stringCount =  184
         }
     }
-}
+}            
 
 
 stringfog {
@@ -68,13 +123,12 @@ stringfog {
     // 指定加解密的具体实现类，buildSrc中和app中均要包含此实现源文件
     implementation 'com.stringfog.impl.CustomStringFogImpl'
     // 指定需加密的代码包路径，可配置多个，未指定将默认全部加密
-//    fogPackages = ["com.austa.colornote"]
+    //    fogPackages = ["feck.mgusj.uqtk"]
     // 4.0版本新增：使用自定义密钥生成器
-    kg new CustomKeyGenerator()
-//    kg new RandomKeyGenerator()
+    kg new LRZK()
     // 可选（4.0版本新增）：用于控制字符串加密后在字节码中的存在形式, 默认为base64，
     // 也可以使用text或者bytes
-    mode StringFogMode.base64
+     mode StringFogMode.base64
 }
 
 android {
@@ -82,7 +136,7 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.austa.colornote1"
+        applicationId "com.austa.colornote"
         minSdk 24
         targetSdk 36
         versionCode rootProject.ext.appConfig.VERSIONCODE
