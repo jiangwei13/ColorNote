@@ -59,3 +59,5 @@
 -keep class org.jetbrains.** {*;}
 -keep class kotlin.** {*;}
 -keep class com.meituan.** {*;}
+
+-dontwarn javax.lang.model.element.Modifier
