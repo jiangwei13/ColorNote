@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">ColorNote</string>
+    <string name="settings">Settings</string>
+    <string name="about">About ColorNote</string>
+    <string name="share">Share App</string>
+    <string name="rate">Rate App</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="contact">Contact Us</string>
+
+    <!-- MainActivity -->
+    <string name="new_note">New Note</string>
+
+    <!-- EditNoteActivity -->
+    <string name="edit_note">Edit Note</string>
+    <string name="title_hint">Title (Optional)</string>
+    <string name="note_hint">Your Note</string>
+    <string name="pin_note">Pin note (Always on top)</string>
+    <string name="choose_color">Choose Color</string>
+    <string name="save_note">Save Note</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="note_empty_error">Note cannot be empty</string>
+    <string name="share_note">Share Note</string>
+    <string name="favorite">Favorite</string>
+    <string name="last_modified">Last modified: %1$s</string>
+
+    <!-- TileViewActivity -->
+    <string name="view_note">View Note</string>
+    <string name="created_at">Created: %1$s</string>
+    <string name="last_modified_at">Last modified: %1$s</string>
+
+    <!-- Splash -->
+    <string name="splash_tagline">Your Visual Idea Board</string>
+    <string name="developer_name">Austa</string>
+    <string name="app_logo_desc">App Logo</string>
+
+    <!-- About -->
+    <string name="version_format">Version %1$s</string>
+    <string name="app_description">ColorNote is a modern, visual idea board designed to help you organize your thoughts and tasks in a creative, spatial way.</string>
+    <string name="copyright">© 2026 All Rights Reserved</string>
+    <string name="developed_by">Developed by Austa</string>
+</resources>

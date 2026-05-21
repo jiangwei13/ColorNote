@@ -1,0 +1,28 @@
+<resources>
+    <string-array name="tile_colors">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Purple</item>
+        <item>Orange</item>
+    </string-array>
+    <string-array name="tile_colors_values">
+        <item>@color/tile_red</item>
+        <item>@color/tile_blue</item>
+        <item>@color/tile_green</item>
+        <item>@color/tile_yellow</item>
+        <item>@color/tile_purple</item>
+        <item>@color/tile_orange</item>
+    </string-array>
+    <string-array name="theme_names">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System default</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>light</item>
+        <item>dark</item>
+        <item>system</item>
+    </string-array>
+</resources>

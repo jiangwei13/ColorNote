@@ -1,0 +1,46 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Appearance">
+        <ListPreference
+            android:key="theme"
+            android:title="Theme"
+            android:icon="@drawable/ic_theme"
+            android:entries="@array/theme_names"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="system"
+            android:summary="%s" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Support">
+        <Preference
+            android:key="share"
+            android:title="Share App"
+            android:icon="@drawable/ic_share"
+            android:summary="Recommend ColorNote to friends" />
+        <Preference
+            android:key="rate"
+            android:title="Rate App"
+            android:icon="@drawable/ic_star"
+            android:summary="Love it? Leave a review" />
+        <Preference
+            android:key="contact"
+            android:title="Contact Us"
+            android:icon="@drawable/ic_email"
+            android:summary="Send feedback or questions" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="More Info">
+        <Preference
+            android:key="about"
+            android:title="About ColorNote"
+            android:icon="@drawable/ic_info"
+            android:summary="Version, developer, and app info" />
+        <Preference
+            android:key="privacy"
+            android:title="Privacy Policy"
+            android:icon="@drawable/ic_privacy"
+            android:summary="Read our privacy policy" />
+    </PreferenceCategory>
+</PreferenceScreen>
