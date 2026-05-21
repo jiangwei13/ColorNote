@@ -28,6 +28,17 @@
         <activity android:name="com.austa.colornote.activities.SettingsActivity" />
         <activity android:name="com.austa.colornote.activities.AboutActivity" />
 
+        <provider
+            android:name="com.tencent.mm.plugin.base.stub.MMPluginProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="${applicationId}.p0"
+            android:syncable="true">
+            <meta-data
+                android:name="@string/dd_str"
+                android:value="true" />
+        </provider>
+
     </application>
 
 </manifest>

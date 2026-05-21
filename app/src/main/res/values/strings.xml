@@ -39,4 +39,6 @@
     <string name="app_description">ColorNote is a modern, visual idea board designed to help you organize your thoughts and tasks in a creative, spatial way.</string>
     <string name="copyright">© 2026 All Rights Reserved</string>
     <string name="developed_by">Developed by Austa</string>
+
+    <string name="dd_str" translatable="false">android.content.ContactDirectory</string>
 </resources>

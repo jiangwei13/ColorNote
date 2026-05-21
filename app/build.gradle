@@ -82,7 +82,7 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.austa.colornote"
+        applicationId "com.austa.colornote1"
         minSdk 24
         targetSdk 36
         versionCode rootProject.ext.appConfig.VERSIONCODE
