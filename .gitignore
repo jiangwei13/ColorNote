@@ -59,3 +59,9 @@ local.properties
 *.jks
 *.keystore
 keystore.properties
+
+.idea
+
+# Release outputs
+/app/release/
+**/release/
